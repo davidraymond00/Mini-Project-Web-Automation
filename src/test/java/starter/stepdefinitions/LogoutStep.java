@@ -1,8 +1,6 @@
 package starter.stepdefinitions;
 
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import io.cucumber.java.en.And;
 import net.thucydides.core.annotations.Steps;
 import starter.pages.LogoutPage;
 
@@ -10,18 +8,18 @@ public class LogoutStep {
 
     @Steps
     LogoutPage logoutPage;
-    @Given("I am on the dashboard page")
-    public void iAmOnTheDashboardPage(){
-        logoutPage.openUrl();
+    @And("I click human button")
+    public void iClickHumanButton() {
+        logoutPage.humanBtn();
     }
 
-    @When("I click ikon")
-    public void iClickIkon() {
-        logoutPage.ikonB();
+    @And("I click logout button")
+    public void iClickLogoutButton() {
+        logoutPage.logoutBtn();
     }
 
-    @Then("I go to login page")
-    public void iGoToLoginPage() {
-        logoutPage.loginPage();
+    @And("I go to dashboardd")
+    public void iGoToDashboardd() {
+        logoutPage.dashboard();
     }
 }
